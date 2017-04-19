@@ -5,7 +5,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="cn.itheima.hibernate.domain.Product" table="product">
+	<class name="cn.hchaojie.jee.hibernate.domain.Product" table="product">
 		<id name="id">
 			<generator class="uuid" />
 		</id>
