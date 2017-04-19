@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.itheima.hibernate.domain.Product" table="product">
+		<id name="id">
+			<generator class="uuid" />
+		</id>
+
+		<property name="name" column="name" />
+		<property name="price" />
+		<property name="pdesc" />
+
+		<!-- 注意keyword是一个List<String> keywords并没有创建对应的实体 -->
+		<list name="keywords">
+			<key column="pid" />
+			<list-index column="priority" base="0"/>
+			<element column="name" type="string" />
+		</list>
+	</class>
+</hibernate-mapping>
+
+
+
